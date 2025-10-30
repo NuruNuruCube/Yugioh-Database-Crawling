@@ -31,7 +31,3 @@ It organizes the raw API data into a clean, CSV-friendly format — including ca
 | `is_fusion`, `is_link`, `is_pendulum`, etc. | Boolean flags for mechanics |
 
 ---
-
-## 🧠 Description Builder
-
-If a card has both Pendulum and Monster effects:
