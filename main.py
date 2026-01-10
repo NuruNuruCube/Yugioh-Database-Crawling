@@ -9,7 +9,7 @@ INPUT_CSV = "Input.csv"
 OUTPUT_CSV = "yugioh_cards.csv"
  
 HEADERS = [
-    "id",
+    # "id",
     "passcode",
     "name",
     "category",
@@ -61,7 +61,7 @@ def scrape_card(card_name,id):
     data = {h: "" for h in HEADERS}
  
     # --- Simple INFO ---
-    data["id"] = id
+    # data["id"] = id
     data["name"] = card.get("name", "")
     data["passcode"] = str(card.get("id", ""))
     data["link"] = card.get("linkval", -1)
@@ -178,7 +178,7 @@ def main():
         reader = csv.DictReader(f)
         for row in reader:
             name = row.get("name", "").strip()
-            id = row.get("id", "").strip()
+            # id = row.get("id", "").strip()
             if not name:
                 continue
  
