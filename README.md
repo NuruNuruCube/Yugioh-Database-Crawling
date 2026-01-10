@@ -1,29 +1,29 @@
-# 🃏 Yu-Gi-Oh! Card Scraper
+# Yu-Gi-Oh! Card Scraper
  
 This Python tool fetches and processes Yu-Gi-Oh! card data from the **[YGOProDeck API](https://db.ygoprodeck.com/api-guide/)**.  
 It cleans and structures the raw data into a CSV-friendly format — including card categories, icons, monster attributes, and effect text.
  
 ---
  
-## ⚙️ Features
+## Features
  
-- 🔗 **Data Source:** Fetches all card data directly from the **YGOProDeck API**
-- 🧩 **Category Detection:** Determines if a card is a `Monster`, `Spell`, or `Trap` using `humanReadableCardType`
-- 💬 **Effect Separation:** Extracts both **Pendulum** and **Monster** effects into separate fields
-- ⚔️ **Type Flags:** Automatically detects and sets mechanic flags such as  
+- **Data Source:** Fetches all card data directly from the **YGOProDeck API**
+- **Category Detection:** Determines if a card is a `Monster`, `Spell`, or `Trap` using `humanReadableCardType`
+- **Effect Separation:** Extracts both **Pendulum** and **Monster** effects into separate fields
+- **Type Flags:** Automatically detects and sets mechanic flags such as  
   `is_fusion`, `is_synchro`, `is_xyz`, `is_pendulum`, `is_link`, and more
-- 🪄 **Monster Attributes:** Includes detailed monster information such as  
+- **Monster Attributes:** Includes detailed monster information such as  
   `type`, `attribute`, `atk`, `def`, `level`, `link`, and `link_arrows`
-- 🧠 **Smart Field Handling:**  
+- **Smart Field Handling:**  
   - Only assigns `type` (race) and `attribute` if the card is a **Monster**  
   - Converts `linkmarkers` into simplified directions (e.g., `T-BL-TR`)
-- 🪶 **Icon Extraction:** Identifies the correct **icon type** for Spell and Trap cards  
+- **Icon Extraction:** Identifies the correct **icon type** for Spell and Trap cards  
   (`Continuous`, `Quick-Play`, `Field`, `Counter`, etc.)
-- 📦 **Export Ready:** Outputs structured, human-readable data in CSV format — perfect for databases, analytics, or web apps
+- **Export Ready:** Outputs structured, human-readable data in CSV format — perfect for databases, analytics, or web apps
  
 ---
  
-## 🧩 Data Fields
+## Data Fields
  
 | ID   | Field               | Description                                                                                           |
 |------|---------------------|-------------------------------------------------------------------------------------------------------|
@@ -55,3 +55,7 @@ It cleans and structures the raw data into a CSV-friendly format — including c
 | `26` | `is_tuner`          | Boolean flag — Tuner Monster                                                                          |
 | `27` | `is_union`          | Boolean flag — Union Monster                                                                          |
 | `28` | `icon`              | Card icon (e.g. `"Continuous"`, `"Quick-Play"`, `"Field"`, `"Counter"`) — only for Spells or Traps    |
+
+## How to use
+1. add input.csv
+2. run main.py
